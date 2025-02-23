@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const features = [
+  { icon: 'expertise', title: 'End-to-End IT Expertise' },
+  { icon: 'consulting/mitigation', title: 'Regulatory Compliance & Risk Mitigation' },
+  { icon: 'outsourcing/security', title: 'Proactive Cybersecurity Protection' },
+  { icon: 'consulting/response', title: 'Incident Response and Management' },
+];
+
+---
+
+<section class="bg-blue-700 py-20 text-white text-center">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-serif font-bold mb-4">Features</h2>
+    <p class="text-xl mb-12 max-w-2xl mx-auto">
+        Here’s why MedMarvel Software Solutions is the ideal partner for your consulting and auditing needs
+    </p>
+
+    <div class="bg-white text-blue-700 rounded-lg shadow-lg p-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {features.map((feature) => (
+          <div class="flex flex-col items-center">
+            <Icon name={feature.icon} class="w-16 h-16 mb-4" />
+            <p class="text-sm font-semibold">{feature.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

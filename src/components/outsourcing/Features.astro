@@ -1,0 +1,40 @@
+---
+import { FaPills, FaClinicMedical, FaPager, FaCalendarAlt, FaClipboardCheck } from 'react-icons/fa';
+import { Icon } from 'astro-icon/components';
+
+const features = [
+  { icon: 'expertise', title: 'Industry Specific Expertise' },
+  { icon: 'outsourcing/security', title: ' Data Security & Confidentiality' },
+  { icon: 'outsourcing/fast', title: ' Faster Turnaround Times' },
+  { icon: 'outsourcing/global', title: 'Global Delivery Model' },
+];
+
+---
+
+<section class="bg-blue-700 py-20 text-white text-center">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-serif font-bold mb-4">Features</h2>
+    <p class="text-xl mb-12 max-w-2xl mx-auto">
+      Here’s why MedMarvel Software Solutions is the ideal partner for your knowledge processing and outsourcing needs
+    </p>
+
+    <div class="bg-white text-blue-700 rounded-lg shadow-lg p-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {features.map((feature) => (
+          <div class="flex flex-col items-center">
+            <Icon name={feature.icon} class="w-16 h-16 mb-4" />
+            <p class="text-sm font-semibold">{feature.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- <p class="text-xl mt-12 mb-8 max-w-2xl mx-auto">
+      Our science-backed platform is built on the principles of behavioral economics to work for the hardest-to-reach populations.
+    </p> -->
+
+    <!-- <a href="/platform" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">
+      Explore the Your Company platform
+    </a> -->
+  </div>
+</section>

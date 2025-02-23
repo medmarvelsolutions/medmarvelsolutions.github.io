@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+
+const steps = [
+  {
+    icon: 'consulting/assess', // Placeholder SVG path for the first icon
+    description: "We start with a comprehensive evaluation of your current IT infrastructure, regulatory compliance, and operational workflows to identify areas of improvement and potential risks."
+  },
+  {
+    icon: 'consulting/roadmap', // Placeholder SVG path for the second icon
+    description: 'Our team collaborates with your organization to develop a customized strategy for improving workflow efficiency and security while ensuring compliance with industry regulations.'
+  },
+  {
+    icon: 'consulting/optimise', // Placeholder SVG path for the third icon
+    description: 'We help you deploy, configure, and fine-tune your solutions to enhance operational efficiency and security.'
+  },
+  {
+    icon: 'compliance',
+    description: 'Our engagement doesn’t end with implementation—we provide continuous monitoring, security assessments, and IT system audits to keep your healthcare organization future-ready and compliant.'
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-serif font-bold text-center mb-16">How it works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {steps.map((step, index) => (
+        <div class="bg-gray-50 p-8 rounded-lg text-center" id={`step-${index.toString()}`}>
+          <Icon class="block mx-auto w-16 h-16 mb-6" name={step.icon} />
+          <p class="text-gray-700">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
