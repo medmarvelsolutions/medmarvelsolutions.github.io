@@ -1,0 +1,14 @@
+---
+import ExpertiseContent from "./ExpertiseContent.astro";
+
+const { title, content } = Astro.props;
+---
+
+<div class="flex flex-wrap mb-4">
+    <div class="w-full sm:w-1/2 p-12 bg-[#335175] flex flex-col justify-center rounded-tl-lg rounded-bl-lg">
+        <h4 class="text-2xl text-center text-white">{title}</h4>
+    </div>
+    <div class="w-full sm:w-1/2 bg-gray-50 p-8 rounded-tr-lg rounded-br-lg">
+        <ExpertiseContent content={content} />
+    </div>
+</div>

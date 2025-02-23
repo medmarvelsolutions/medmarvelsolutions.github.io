@@ -1,0 +1,123 @@
+---
+import ExpertiseLeft from "./ExpertiseLeft.astro"
+import ExpertiseRight from "./ExpertiseRight.astro"
+
+const expertise = [
+    {
+        "title": "Medical Device Development",
+        "content": [
+            {
+                "heading": "Conceptualization and Design",
+                "information": "From ideation to prototyping and design development, we create cutting-edge medical devices."
+            },
+            {
+                "heading": "Regulatory Compliance",
+                "information": "Ensuring compliance with regulatory requirements such as FDA clearance and CE marking to facilitate market approval."
+            },
+            {
+                "heading": "Testing and Validation",
+                "information": "Conducting rigorous testing and validation to ensure medical devices meet safety, efficacy, and quality standards."
+            }
+        ]
+    },
+    {
+        "title": "Digital Health Product Development",
+        "content": [
+            {
+                "heading": "Healthcare Software Development",
+                "information": "Designing and developing advanced healthcare software, including telemedicine platforms, patient engagement solutions, and clinical decision support systems."
+            },
+            {
+                "heading": "Mobile Health (mHealth) App Development",
+                "information": "Creating innovative mobile apps for patient engagement, remote monitoring, and medication adherence to enhance healthcare accessibility."
+            },
+            {
+                "heading": "AI and Machine Learning Solutions",
+                "information": "Developing AI-driven solutions for predictive analytics, natural language processing, and computer vision to optimize healthcare delivery."
+            }
+        ]
+    },
+    {
+        "title": "Healthcare IT Consulting",
+        "content": [
+            {
+                "heading": "Electronic Health Record (EHR) Implementation",
+                "information": "Implementing and optimizing EHR systems to improve clinical workflows and patient care efficiency."
+            },
+            {
+                "heading": "Healthcare Data Analytics",
+                "information": "Providing data-driven insights to help healthcare organizations enhance patient outcomes and operational efficiency."
+            },
+            {
+                "heading": "Interoperability Solutions",
+                "information": "Developing seamless data exchange solutions to integrate disparate healthcare systems and ensure continuity of care."
+            }
+        ]
+    },
+    {
+        "title": "Medical Imaging and Diagnostics",
+        "content": [
+            {
+                "heading": "Medical Imaging Software Development",
+                "information": "Creating advanced software solutions for image processing, analysis, and visualization to support medical diagnostics."
+            },
+            {
+                "heading": "Computer-Aided Detection (CAD) and Diagnosis (CADx)",
+                "information": "Developing AI-powered CAD and CADx solutions to assist radiologists in detecting and diagnosing diseases with greater accuracy."
+            },
+            {
+                "heading": "Medical Imaging Data Management",
+                "information": "Providing scalable solutions for secure storage, retrieval, and sharing of medical imaging data across healthcare institutions."
+            }
+        ]
+    },
+    {
+        "title": "Clinical Research and Trials",
+        "content": [
+            {
+                "heading": "Clinical Trial Management System (CTMS) Development",
+                "information": "Building CTMS platforms to streamline study planning, patient recruitment, and data management for clinical trials."
+            },
+            {
+                "heading": "Clinical Data Management",
+                "information": "Offering comprehensive data collection, cleaning, and analysis services to support evidence-based research."
+            },
+            {
+                "heading": "Biostatistics and Statistical Programming",
+                "information": "Providing biostatistical analysis and programming solutions to ensure accurate interpretation of clinical research data."
+            }
+        ]
+    },
+    {
+        "title": "Healthcare Cybersecurity",
+        "content": [
+            {
+                "heading": "Risk Assessment and Compliance",
+                "information": "Conducting security risk assessments and ensuring compliance with healthcare regulations like HIPAA to protect sensitive data."
+            },
+            {
+                "heading": "Penetration Testing and Vulnerability Assessment",
+                "information": "Identifying and mitigating security weaknesses through rigorous penetration testing and vulnerability assessments."
+            },
+            {
+                "heading": "Incident Response and Management",
+                "information": "Providing rapid incident response services to help healthcare organizations detect, mitigate, and recover from cybersecurity threats."
+            }
+        ]
+    }
+]
+
+---
+
+<section class="bg-white pt-12 pb-16 px-20">
+    <h2 class="text-3xl font-serif font-bold text-center mb-12">Our Domains of Expertise</h2>
+    <div>
+        {expertise.map((domain, idx) => {
+            if (idx % 2 == 0) {
+                return <ExpertiseLeft title={domain.title} content={domain.content} />
+            } else {
+                return <ExpertiseRight title={domain.title} content={domain.content} />
+            }
+        })}
+    </div>
+</section>
