@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.jpeg';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -12,17 +12,16 @@ const navItems = [
 ];
 ---
 
-<header class="bg-white shadow-md">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<header class="bg-white shadow-md sticky top-0">
+  <div class="container mx-auto px-8 py-4 flex justify-between items-center">
     <a href="/" class="flex font-serif font-bold items-center">
       <Image 
         src={logoImg} 
         alt="Company Logo Image" 
         class="rounded-lg"
-        width={48}
-        height={48}
+        width={200}
       />
-      <span class="ml-2">Medmarvel Solutions Pvt. Ltd.</span>
+      <!-- <span class="ml-2">Medmarvel Solutions Pvt. Ltd.</span> -->
     </a>
     <nav class="hidden md:flex space-x-6">
       {navItems.map(item => (
