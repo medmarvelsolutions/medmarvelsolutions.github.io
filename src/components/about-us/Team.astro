@@ -1,50 +1,31 @@
 ---
 import { Image } from "astro:assets"
-import brianHodgkinsImage from "../../assets/brian-hodgkins.png"
-import blankProfileImage from "../../assets/blank-profile.png";
+import manishMehtaImage from "../../assets/manish-mehta.jpeg"
+import rupalMehtaImage from "../../assets/rupal-mehta.jpeg";
 
 const people = [
     {
         name: "Rupal Mehta",
-        image: blankProfileImage,
+        image: rupalMehtaImage,
         title: "Founder",
         content: "Rupal Mehta brings over 18 years of expertise in medical imaging, SaaS innovation, and AI-powered diagnostics. With a proven track record in developing cutting-edge solutions for radiology and enterprise healthcare, she has driven multiple successful startups, transforming healthcare operations on a global scale. Awarded Top 50 Smart Healthcare Leaders and recognized among the 101 Most Fabulous Global Healthcare Leaders, she has consistently pushed the boundaries of innovation, securing government grants and forging global partnerships."
     },
     {
         name: "Manish Mehta",
-        image: blankProfileImage,
+        image: manishMehtaImage,
         title: "Co-Founder",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper dolor et tellus congue, sit amet accumsan augue tristique. Donec mi risus, interdum non dolor a, fermentum varius augue. Nunc maximus, metus non dignissim vestibulum, urna nisl porttitor leo, ut scelerisque augue ligula non eros"
+        content: "With over two decades of experience in sales, business development, marketing, and operations, Manish Mehta is a seasoned business leader with his expertise spanning across technology, healthcare, and e-commerce industries. Manish has achieved remarkable milestones, including generating over $1 million in revenue through the Walmart marketplace and processing over a million teleradiology reports through Everest Medical Solutions (now Marvel Software Solutions). With a commitment to excellence, he continues to drive impactful solutions that transform industries and create lasting value."
     }
 ]
 ---
 
-<section class="bg-blue-700 text-white py-20">
+<section class="bg-white py-20">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-serif font-bold text-center mb-12">Meet the Founders</h2>
-      <div class="flex snap-x snap-mandatory pb-4">
+      <div class="flex flex-wrap pb-4">
         {people.map((person) => (
-        //   <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/2 snap-start">
-        //     <div class="bg-white rounded-lg shadow-lg p-8 mx-4">
-        //       <p class="text-gray-600 italic mb-4">{person.title}</p>
-        //       <div class="flex items-center">
-        //         <Image 
-        //           src={person.image} 
-        //           alt={person.name} 
-        //           class="w-12 h-12 rounded-full mr-4"
-        //           // width={600}
-        //           // height={400}
-        //         />
-        //         <div>
-        //           <p class="font-semibold">{person.name}</p>
-        //           <p class="text-sm text-gray-500">{person.title}</p>
-        //           {/* <p class="text-sm text-gray-500">{person.company}</p> */}
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>
-            <div class="w-full sm:w-1/2 md:w-1/2 snap-start">
-                <div class="bg-white rounded-lg shadow-lg p-8 mx-4">
+            <div class="w-full sm:w-1/2 md:w-1/2">
+                <div class="bg-white p-8 mx-4">
                     <Image
                         src={person.image}
                         alt={person.name}
