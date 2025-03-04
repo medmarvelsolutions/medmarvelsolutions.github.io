@@ -1,0 +1,24 @@
+---
+const metrics = [
+  { value: '>15', label: 'USA Hospitals'},
+  { value: '>50', label: 'USA Doctors'},
+  { value: '450', label: 'Average Cases Per Day'},
+  { value: '>1 million', label: 'Total Cases' },
+];
+---
+
+<section class="bg-gray-50 pb-16 pt-8">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-serif font-bold text-center mb-12">Numbers That Drive Success</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8">
+      {metrics.map((metric) => (
+        <div class="text-center">
+          <div class="flex items-baseline justify-center">
+            <span class="text-5xl font-bold text-[#335175]">{metric.value}</span>
+          </div>
+          <p class="font-semibold text-gray-700 max-w-[200px] mx-auto">{metric.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
