@@ -12,8 +12,8 @@ export const theme = {
       },
     },
     fontFamily: {
-      sans: ['Inter', ..._fontFamily.sans],
-      serif: ['Merriweather', ..._fontFamily.serif],
+      sans: ['Nunito Sans', ..._fontFamily.sans],
+      serif: ['Crete Round', ..._fontFamily.serif],
     },
   },
 }
