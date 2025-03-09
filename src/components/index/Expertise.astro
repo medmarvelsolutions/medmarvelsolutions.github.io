@@ -21,11 +21,11 @@ const services = [
 <section class="bg-gray-50 pt-12 pb-16">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-serif font-bold text-center mb-12">Our Expertise</h2>
-        <div class="flex flex-wrap pb-4">
+        <div class="flex flex-wrap pb-4 gap-3 sm:gap-0">
             {
                 services.map((service) => (
                     <div class="w-full sm:w-1/2 snap-start">
-                        <div class="bg-white p-8 mx-4">
+                        <div class="bg-white p-8 sm:mx-4">
                             <h2 class="text-xl text-center font-serif font-bold mb-8">{service.title}</h2>
                             <p class="mb-6 text-center">{service.description}</p>
                             <a href={service.link} class="block mx-auto bg-[#335175] text-white py-2 px-4 rounded-md w-max">Learn More</a>
