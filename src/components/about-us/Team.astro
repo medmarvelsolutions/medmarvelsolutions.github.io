@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import manishMehtaImage from "../../assets/manish-mehta.jpeg"
 import rupalMehtaImage from "../../assets/rupal-mehta.jpeg";
+import nileshKurwaleImage from "../../assets/nilesh-kurwale.jpg";
 
 const people = [
     {
@@ -11,11 +12,17 @@ const people = [
         content: "Rupal Mehta brings over 18 years of expertise in medical imaging, SaaS innovation, and AI-powered diagnostics. With a proven track record in developing cutting-edge solutions for radiology and enterprise healthcare, she has driven multiple successful startups, transforming healthcare operations on a global scale. Awarded Top 50 Smart Healthcare Leaders and recognized among the 101 Most Fabulous Global Healthcare Leaders, she has consistently pushed the boundaries of innovation, securing government grants and forging global partnerships."
     },
     {
+        name: "Dr. Nilesh Kurwale",
+        image: nileshKurwaleImage,
+        title: "Co-Founder",
+        content: "Dr. Nilesh Kurwale is a renowned epilepsy who brings decades of expertise in neurological surgery, epilepsy monitoring, and surgical innovation. With an MBBS and a specialization in Neurosurgery from the prestigious All India Institute of Medical Sciences (AIIMS), New Delhi, he has established himself as one of India's leading epilepsy surgeons. His dedication to advancing epilepsy treatment has led to the establishment of a comprehensive epilepsy surgery unit, setting new benchmarks in clinical excellence. As Co-Founder of MedMarvel Software Solutions, he leverages his clinical expertise to drive innovation in healthcare technology"
+    },
+    {
         name: "Manish Mehta",
         image: manishMehtaImage,
         title: "Co-Founder",
         content: "With over two decades of experience in sales, business development, marketing, and operations, Manish Mehta is a seasoned business leader with his expertise spanning across technology, healthcare, and e-commerce industries. Manish has achieved remarkable milestones, including generating over $1 million in revenue through the Walmart marketplace and processing over a million teleradiology reports through Everest Medical Solutions (now Marvel Software Solutions). With a commitment to excellence, he continues to drive impactful solutions that transform industries and create lasting value."
-    }
+    },
 ]
 ---
 
@@ -24,7 +31,7 @@ const people = [
       <h2 class="text-3xl font-serif font-bold text-center mb-12">Meet the Founders</h2>
       <div class="flex flex-wrap pb-4">
         {people.map((person) => (
-            <div class="w-full sm:w-1/2 md:w-1/2">
+            <div class="w-full md:w-1/2 last:md:mx-auto">
                 <div class="bg-white p-8 mx-4">
                     <Image
                         src={person.image}
